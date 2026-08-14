@@ -39,16 +39,6 @@ mise use -g herdr
 
 If mise reports `herdr not found in mise tool registry`, update mise and retry. Older mise versions predate the Herdr registry entry; `mise use -g github:herdrdev/herdr` works as a temporary fallback.
 
-## Install with pixi
-
-If you already use pixi:
-
-```bash
-pixi global install herdr
-```
-
-This installs Herdr into the global pixi environment. Update it with `pixi global update herdr` when you want to refresh the installed version.
-
 ## Install with Nix
 
 If you already use Nix, Herdr provides a flake that builds Herdr from source:
@@ -128,7 +118,7 @@ Herdr checks for new releases and notifies you in the app. You can update manual
 herdr update
 ```
 
-`herdr update` is for installs managed by Herdr's own installer. Homebrew, mise, pixi, and Nix installs are updated through those package managers instead.
+`herdr update` is for installs managed by Herdr's own installer. Homebrew, mise, and Nix installs are updated through those package managers instead.
 
 On Linux and macOS, Herdr uses the stable update channel by default. To opt into preview builds from `master`, set the channel:
 
@@ -156,7 +146,7 @@ To opt into experimental live server handoff for supported running sessions, run
 herdr update --handoff
 ```
 
-Live handoff does not apply to Homebrew, mise, pixi, or Nix package-manager updates. For those installs, update with the package manager, then restart that Herdr session when you are ready to use the new server. If a running session still uses the old server, stop it with `herdr server stop` or `herdr session stop <name>`, then run Herdr again.
+Live handoff does not apply to Homebrew, mise, or Nix package-manager updates. For those installs, update with the package manager, then restart that Herdr session when you are ready to use the new server. If a running session still uses the old server, stop it with `herdr server stop` or `herdr session stop <name>`, then run Herdr again.
 
 ## Requirements
 

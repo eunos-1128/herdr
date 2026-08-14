@@ -39,16 +39,6 @@ mise use -g herdr
 
 mise が `herdr not found in mise tool registry` と報告する場合は、mise をアップデートして再試行してください。古い mise は Herdr のレジストリ登録より前のバージョンです。一時的な回避策として `mise use -g github:herdrdev/herdr` も使えます。
 
-## pixi でインストール
-
-すでに pixi を使っている場合:
-
-```bash
-pixi global install herdr
-```
-
-これで Herdr がグローバル pixi 環境にインストールされます。インストール済みのバージョンを更新するには `pixi global update herdr` を使います。
-
 ## Nix でインストール
 
 すでに Nix を使っている場合、Herdr はソースからビルドする flake を提供しています:
@@ -128,7 +118,7 @@ Herdr は新しいリリースをチェックし、アプリ内で通知しま�
 herdr update
 ```
 
-`herdr update` は Herdr 自身のインストーラーで管理されているインストール向けです。Homebrew、mise、pixi、Nix のインストールは、それぞれのパッケージマネージャーでアップデートしてください。
+`herdr update` は Herdr 自身のインストーラーで管理されているインストール向けです。Homebrew、mise、Nix のインストールは、それぞれのパッケージマネージャーでアップデートしてください。
 
 Linux と macOS では、Herdr はデフォルトで安定版アップデートチャンネルを使います。`master` からのプレビュービルドにオプトインするには、チャンネルを設定します:
 
@@ -156,7 +146,7 @@ Windows ベータビルドは今のところプレビュー限定です。安定
 herdr update --handoff
 ```
 
-ライブハンドオフは Homebrew、mise、pixi、Nix のパッケージマネージャー経由のアップデートには適用されません。それらのインストールではパッケージマネージャーでアップデートし、新しいサーバーを使う準備ができたらその Herdr セッションを再起動してください。実行中のセッションがまだ古いサーバーを使っている場合は、`herdr server stop` または `herdr session stop <name>` で停止してから、再度 Herdr を実行します。
+ライブハンドオフは Homebrew、mise、Nix のパッケージマネージャー経由のアップデートには適用されません。それらのインストールではパッケージマネージャーでアップデートし、新しいサーバーを使う準備ができたらその Herdr セッションを再起動してください。実行中のセッションがまだ古いサーバーを使っている場合は、`herdr server stop` または `herdr session stop <name>` で停止してから、再度 Herdr を実行します。
 
 ## 動作要件
 
